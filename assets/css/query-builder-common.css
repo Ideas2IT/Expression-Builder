@@ -1,0 +1,829 @@
+@font-face {
+    font-family : "open sans";
+    src         : url(../fonts/open-sans/OpenSans-Regular.ttf) format("truetype");
+}
+
+body {
+    height      : 100%;
+    background  : url("../images/wg_blurred_backgrounds_11.jpg") no-repeat fixed center center / cover  rgba(0, 0, 0, 0);
+    font-size   : 12px;
+    font-family : open sans;
+}
+
+header h3{
+    color : #fff;
+}
+
+.height-100-pct {
+    height : 100%;
+}
+
+.width-100-pct {
+    width : 100%;
+}
+
+.table-panel{
+	position         : relative;
+    background-color : #F5F5F5;
+    padding          : 5px;      
+}
+
+/* --------------------- Table search box css start--------------------------------- */
+
+.search-outer-box{
+    padding : 0;
+}
+
+.dark input[type=text] {
+	border-top    : 0px solid #ccc;
+	border-left   : 0px solid #ccc;
+	border-right  : 0px solid #ccc;
+	color         : #ccc;
+	background    : rgba(255, 255, 255, 0.4);
+	border-bottom : 0px solid #ccc;
+	margin        : 4px 10px 0;
+	border-radius : 25px;
+	padding       : 0 0 0 35px;
+}
+
+
+.search {
+	padding    : 6px 15px 6px 15px;
+	width      : 60%;
+	margin-top : -5px;
+	color      : #fff;
+}
+
+.form-control {
+	display            : block;
+	width              : 100%;
+	padding            : 6px 12px;
+	font-size          : 12px!important;
+	line-height        : 1.42857143;
+	color              : #555;
+	background-color   : #fff;
+	background-image   : none;
+	border             : 1px solid rgba(0, 0, 0, 0.1)!important;
+	border-radius      : 3px;
+	-webkit-box-shadow : none!important;
+	box-shadow         : none!important;
+	-webkit-transition : none!important;
+	-o-transition      : border-color ease-in-out .15s, box-shadow ease-in-out .15s!important;
+	transition         : none!important;
+}
+
+
+.dark {
+	position : absolute;
+	top      : -7px;
+	right    : 0;
+	z-index  : 999;
+}
+
+.dark:before {
+	content       : "\f002";
+	position      : absolute;
+	font-family   : 'FontAwesome';
+	font-style    : normal;
+	font-weight   : normal;
+	speak         : none;
+	display       : block;
+	height        : 30px;
+	width         : 30px;
+	text-align    : center;
+	line-height   : 30px;
+	top           : 14px;
+	left          : 13px;
+	color         : #B7C1D3;
+	background    : #ffffff;
+	border-radius : 50%;
+}
+
+/* --------------------- Table search box css end--------------------------------- */
+
+/* --------------------- Table Column in drop area CSS Start--------------------------------- */
+
+
+.table-droppable, .table-tree{
+    background-image : url('../images/bgnoise.jpg');
+    overflow         : hidden;
+    position         : relative;
+}
+
+.tbl-delete {
+    display           : inline-block;
+    height            : 30px;
+    left              : 100%;
+    margin-left       : -20px;
+    margin-top        : 4px;
+    position          : absolute;
+    top               : 0;
+    width             : 30px;
+    cursor            : pointer;
+}
+
+.table-column-list-container {
+    border           : 1px solid #2C3950;
+    width            : 220px; 
+    height           : 220px;
+    position         : absolute;
+    border-radius    : 4px;
+    background-color : #fff;
+}
+
+ul.table-column-list{
+    list-style-type : none;
+    margin          : 0;
+    position        : relative;
+    font-size       : 12px;
+    height          : 168px;
+    overflow-y      : auto;
+    padding-left    : 0;
+    background-color: #fff;
+    
+}
+
+ul.table-column-list li i{
+    vertical-align : inherit;
+}
+
+ul.table-column-list li { 
+	padding       : 5px;
+	box-shadow    : 0 1px 0 rgba(255, 255, 255, 0) inset, 0 -1px 0 rgba(0, 0, 0, 0) inset;
+	transition    : background-color 1s ease;
+	cursor        : pointer;
+}
+ul.table-column-list li:nth-child(even) { 
+	background-image : url("../images/mesh.png");
+}
+
+.column-highlight{
+	background-color : #A9AFBB !important;
+	box-shadow       : 0 1px 0 rgba(255, 255, 255, 0.4) inset, 0 -1px 0 rgba(0, 0, 0, 0.25) inset !important;
+    color            : #fff;
+}
+
+
+.drag-table-title-bar{
+    background-color : #2C3950;
+    cursor           : grabbing;
+    padding          : 4px;
+    border-bottom    : 1px solid #2C3950;
+    color            : #fff;
+}
+
+.drag-table-title-bar > span, .table-column-list li, .tbl-column-properties td.field-name {
+	text-transform : uppercase;
+}
+
+.tbl-column-properties{
+    width : 100%;
+}
+
+.tbl-column-properties th{
+    background-color : #9FC555;
+    padding          : 4px;
+    text-align       : center;
+}
+
+.tbl-column-properties td{
+    padding-left : 4px;
+}
+
+.tbl-column-properties tr:nth-child(odd) { 
+    background-color : #faeff6;
+}
+
+.delete-table-in-drop-area {
+    height    : 100px;
+    right     : 0;
+    position  : absolute;
+    width     : 100px;
+    z-index   : 500;
+    top       : 5px;
+    display   : none;
+}
+
+.drag-helper{
+    background-color : #FFF0F0;
+    padding          : 5px;
+    border-radius    : 4px;
+    min-width        : 130px;
+    border           : 1px solid #ff9b9b;
+    z-index          : 500;
+    text-transform   : uppercase;
+}
+
+.table-droppable-glow-effect{
+    outline            : none;
+    border-color       : #808080;
+    box-shadow         : inset 0 0 4px #808080; 
+    -moz-box-shadow    : inset 0 0 4px #808080; 
+    -webkit-box-shadow : inset 0 0 4px #808080; 
+}
+
+/* --------------------- Table Column in drop area CSS end--------------------------------- */
+
+/* --------------------- Table Tree CSS Start--------------------------------- */
+
+.tree > ul {
+    margin-left : 12px;
+    padding     : 0;
+}
+
+.tree li {
+    list-style-type : none;
+    margin          : 0;
+    padding         : 2px 4px 0;
+    position        : relative
+}
+.tree li::before, .tree li::after {
+    content  : '';
+    left     : -10px;
+    position : absolute;
+    right    : auto
+}
+.tree li::before {
+    border-left : 1px solid #999;
+    bottom      : 50px;
+    height      : 100%;
+    top         : 0;
+    width       : 1px
+}
+.tree li::after {
+    border-top : 1px solid #98963f;
+    height     : 20px;
+    top        : 14px;
+    width      : 15px;  
+}
+.tree li span {
+    border           : 1px solid rgb(169, 175, 187);
+    display          : inline-block;
+    padding          : 3px 0 3px 7px;
+    text-decoration  : none;
+    width            : 98%;
+    cursor           : grabbing;
+    background-color : rgb(169, 175, 187);
+    color            : #fff;
+    text-transform   : uppercase;
+    overflow         : -moz-hidden-unscrollable;
+}
+
+.table-list li {
+	 margin-left : -23px;
+}
+.table-list li > span:hover {
+   background-color : #5F9BDB;
+   transition       : all 0.7s ease;
+}
+
+ul.table-list li{
+	display : none;
+}
+
+
+.table-header{
+    background-color : rgb(44, 57, 80) !important;
+    border           : 1px solid rgb(44, 57, 80) !important;
+    margin-left      : -7px;
+    margin-top       : 5px;
+    color            : #fff !important;
+}
+
+.tree li.parent_li>span {
+    cursor     : pointer;
+    text-align : left;
+    width      : 100%;
+    font-size  : 14px;
+}
+
+.tree>ul>li::before, .tree>ul>li::after {
+    border : 0
+}
+
+.tree li:last-child::before {
+    height : 14px;
+}
+
+.tree li.parent_li>span:hover, .tree li.parent_li>span:hover+ul li span {
+    background : #eee;
+    border     : 1px solid #94a0b4;
+    color      : #000
+}
+
+.table-panel > .panel-body{
+    min-height    : 410px; 
+    border        : 1px solid #E3E7EB; 
+    border-radius : 5px;
+}
+
+.table-list{
+     height     : 416px;
+     overflow-y : auto;
+}
+
+.side-tbl-bar {
+	background: rgba(62, 78, 104, 0.7);
+    height: 420px;
+    position: relative;
+}
+
+.no-height {
+	height : 0 !important;
+}
+
+/* --------------------- Table Tree CSS End--------------------------------- */
+
+/* --------------------- Switch button CSS Start--------------------------------- */
+
+.switch-in-cell {
+    font-size : 12px;
+}
+
+.switch-light-in-table > span{
+    height : 28px;
+}
+
+.switch-light-in-table{
+    width  : 65px; 
+    height : 1.9em !important;
+    margin : 0 !important;
+}
+
+.switch-light-in-table > span:before{
+    width  : 65px !important;
+    height : 26px;
+}
+
+.switch-light-in-table > span span:last-of-type{
+    padding-right : 3em !important;
+}
+
+.switch-light-in-table > span span:first-of-type{
+    padding-left : 0 !important;
+}
+
+.switch-light-in-table > span:before{
+    height : 22px !important;
+}
+
+/* --------------------- Switch button CSS End--------------------------------- */
+
+
+.pulse {
+    background-color : #ddd;
+    border-radius    : 80px;
+    display          : block;
+    height           : 40px;
+    width            : 40px;
+    margin-left      : -18px;
+    margin-top       : -18px;
+    overflow         : hidden;
+    padding          : 5px;
+    position         : absolute;
+    top              : 46px;
+    left             : 51px;
+    z-index          : 2;
+    text-align       : center;
+}
+
+.pulse i {
+	 margin : 3px;
+}
+
+.circle {
+    width                 : 0px;
+    height                : 0px;
+    margin-top            : 0px;
+    margin-left           : 0px;
+    border                : 4px solid red;
+    -webkit-border-radius : 300px;
+    -moz-border-radius    : 300px;    
+    border-radius         : 300px;
+    background            : red;
+    opacity               : 1;
+    position              : absolute;
+    top                   : 45px;
+    left                  : 50px;
+    z-index               : 1;
+}
+
+
+.warning-message {
+	color      : #FF1605;
+	text-align : center;
+}
+
+
+/* -----------Desktop View----------- */ 
+@media only screen and (min-width : 800px) and  (max-width : 980px){
+   .column-md-2 {
+       width       : 25%;
+       float       : left; 
+       margin-left : 5px; 
+   }
+   
+   .column-md-10 {
+       width        : 73%; 
+       float        : right;
+       margin-right : 5px; 
+   }
+}
+
+/* -----------Tablet View----------- */ 
+@media only screen and (min-width : 981px) {
+   .column-md-2 {
+       width       : 18%;
+       float       : left;
+       margin-left : 5px; 
+   }   
+   .column-md-10 {
+       width        : 81%; 
+       float        : right;
+       margin-right : 5px;
+   }
+}
+
+
+.dd-combo-box {
+	position : fixed !important;
+	width    : 110px;
+}
+
+.dd-selected {
+    padding     : 3px !important;
+    font-weight : normal !important;
+} 
+
+.dd-select {
+	height : 22px;
+}
+
+.dd-selected small{
+	display : none;
+}
+
+.popModal .popModal_content {
+    font-size : 12px !important;
+}
+
+
+.query-builder-button {
+    margin : -38px 32px 6px 6px;
+    float  : right; 
+    cursor : pointer; 
+}
+
+.query-builder-button span{
+    padding-left : 5px; 
+}
+
+.expression-container {
+	margin   : 0;
+    padding  : 5px;
+    position : absolute;
+    top      : 0;
+    width    : 100%;  
+    z-index  : 501;
+    height   : 400px;  
+    display  : none;
+    left     : 0;  
+}
+
+.query-builder dl:first-child{
+	margin-top       : 0;
+	margin-bottom    : 0;
+	min-height       : 410px;
+	background-image : url('../images/bgnoise.jpg');
+}
+
+.conditional-btn > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+	border-top-left-radius    : 20px;
+	border-bottom-left-radius : 20px;
+}
+
+.conditional-btn > .btn:last-child:not(:first-child), .btn-group > .dropdown-toggle:not(:first-child) {
+	border-top-right-radius    : 20px;
+    border-bottom-right-radius : 20px;
+}
+
+/* .query-builder .btn-group > .btn, .query-builder .btn-group-vertical > .btn {
+    width : 35px;	
+}
+ */
+
+.table-filter, .field-filter {
+	width          : 200px !important;
+	text-transform : uppercase !important;
+}
+
+.table-filter .filter-option, .field-filter .filter-option{
+    text-transform : uppercase !important;
+}
+
+.text-transform-uppercase {
+    text-transform : uppercase;
+}
+
+.operator-combo {
+	width : 140px !important;
+}
+
+.rule-input-select, .rule-input-date, .rule-input-number{
+	border        : 1px solid transparent;
+    border-radius : 2px;
+    width         : 145px;
+    height        : 25px;
+}
+
+.operator-combo .btn, .table-filter .btn, .field-filter .btn{
+    height : 25px;
+}
+
+.rule-header .btn-group {
+	margin-top : 2.5px;
+}
+
+.rules-list .btn-sm {
+	padding : 0;
+}
+
+.drag-handle i {
+	 top : 3px;
+}
+
+.rule-container .drag-handle i {
+     top : 6px;
+}
+
+/* theme */
+
+
+.sub-board {
+	position      : relative;
+	background    : #E8EBF0;
+	height        : 50px;
+	border-bottom : 1px solid #E3E7EB;
+	border-top    : 3px solid #E3E7EB;
+	padding-top   : 3px;
+}
+
+
+.header-icon {
+	height      : 35px;
+	width       : 20px;
+	float       : left;
+	margin      : 2px 0 0 20px;
+	text-align  : center;
+	padding     : 5px 0 0;
+	line-height : 25px;
+}
+
+
+ol.breadcrumb.newcrumb {
+	padding          : 0;
+	list-style       : none;
+	background-color : transparent!important;
+	border-radius    : 0;
+	position         : relative;
+	z-index          : 999;
+	width            : 100%;
+	font-size        : 13px;
+	margin           : 0;
+	right            : 25px;
+	top              : 0;
+}
+
+ol.breadcrumb.newcrumb li a {
+	color          : #808CA0 !important;
+	padding        : 0;
+	text-transform : capitalize;
+}
+
+
+ol.breadcrumb.newcrumb li a span {
+	border-radius : 50%;
+	color         : #808CA0 !important;
+	height        : 24px;
+	width         : 24px;
+	display       : inline-block;
+	text-align    : center;
+	line-height   : 24px;
+	margin        : 0 5px 0 5px;
+}
+
+
+
+.bevel.all, .bevel.trbl, .bevel.tlbr, .bevel.tr {
+	background-position     : bottom left, bottom right, top right, top left;
+	-moz-background-size    : 51% 51%;
+	-webkit-background-size : 51% 51%;
+	background-size         : 51% 51%;
+	background-repeat       : no-repeat;
+}
+
+
+.bevel.tlbr {
+	background : #FFFFFF;
+	background : -moz-linear-gradient(45deg, #FFFFFF 30px, #FFFFFF 30px), -moz-linear-gradient(135deg, transparent 30px, #FFFFFF 30px), -moz-linear-gradient(225deg, #FFFFFF 30px, #FFFFFF 30px), -moz-linear-gradient(315deg, transparent 30px, #FFFFFF 30px);
+	background : -o-linear-gradient(45deg, #FFFFFF 30px, #FFFFFF 30px), -o-linear-gradient(135deg, transparent 30px, #FFFFFF 30px), -o-linear-gradient(225deg, #FFFFFF 30px, #FFFFFF 30px), -o-linear-gradient(315deg, transparent 30px, #FFFFFF 30px);
+	background : -webkit-linear-gradient(45deg, #FFFFFF 30px, #FFFFFF 30px), -webkit-linear-gradient(135deg, transparent 30px, #FFFFFF 30px), -webkit-linear-gradient(225deg, #FFFFFF 30px, #FFFFFF 30px), -webkit-linear-gradient(315deg, transparent 30px, #FFFFFF 30px);
+}
+
+.container-fluid {
+	padding-left  : 0!important;
+	padding-right : 0!important;
+}
+
+
+.paper-wrap {
+	background-color    : none repeat scroll 0 0 #FFFFFF;
+	background-position : -1px 0;
+	background-repeat   : no-repeat;
+	position            : relative;
+	overflow            : hidden;
+	background          : linear-gradient(45deg, transparent 20px, $color-green 20px), linear-gradient(135deg, transparent 20px, $color-green 20px), linear-gradient(225deg, transparent 20px, $color-green 20px), linear-gradient(315deg, transparent 20px, $color-green 20px);
+	background-position : bottom left, top left, top right, bottom right;
+	background-size     : 50% 50%;
+	background-repeat   : no-repeat;
+	padding             : 0;
+	margin-top          : 10px;
+}
+
+
+.paper-wrap:before {
+	content            : "";
+	position           : absolute;
+	top                : 0;
+	left               : 0;
+	border-width       : 0 42px 42px 0;
+	border-style       : solid;
+	border-color       : #fff rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow : 0 0 0 rgba(0, 0, 0, 0.4), 0 0 10px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow    : 0 0 0 rgba(0, 0, 0, 0.4), 0 0 10px rgba(0, 0, 0, 0.3);
+	box-shadow         : 0 0 0 rgba(0, 0, 0, 0.4), 0 0 10px rgba(0, 0, 0, 0.3);
+	-webkit-transform  : rotate(-90deg);
+	-moz-transform     : rotate(-90deg);
+	-ms-transform      : rotate(-90deg);
+	-o-transform       : rotate(-90deg);
+	filter             : progid: DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+
+#paper-top {
+	width   : 100%;
+	padding : 15px 0 0;
+}
+
+
+.no-pad {
+    padding : 0px!important;
+}
+
+.logo-text {
+	color          : #808CA0 !important;
+	font-size      : 21px;
+	position       : relative;
+	top            : -8px!important;
+	left           : 57px;
+	text-transform : uppercase;
+	font-weight    : bold;
+	letter-spacing : -1px;
+}
+
+.noft-btn {
+    position : relative;
+}
+
+.noft-btn li {
+	display       : inline-block;
+	height        : 30px;
+	width         : 30px;
+	background    : #B7C1D3;
+	margin-left   : 5px;
+	color         : #fff;
+	line-height   : 30px;
+	font-size     : 13px;
+	border-radius : 15px;
+	padding       : 0;
+	cursor        : pointer;
+	text-align    : center;
+	position      : relative;
+	float         : left;
+	left          : 15px;
+	top           : 0px;
+}
+
+.noft-btn li i {
+	font-size      : 1.33em;
+	vertical-align : text-top;
+}
+
+.disabled-link {
+    opacity : 0.5;
+}
+
+.enable-link {
+    opacity : 1;
+}
+
+
+.rotate{
+    -webkit-transition-duration  : 0.8s;
+    -moz-transition-duration     : 0.8s;
+    -o-transition-duration       : 0.8s;
+    transition-duration          : 0.8s;     
+    -webkit-transition-property  : -webkit-transform;
+    -moz-transition-property     : -moz-transform;
+    -o-transition-property       : -o-transform;
+    transition-property          : transform;     
+    overflow                     : hidden;
+}  
+
+.rotate:hover {
+    -webkit-transform : rotate(360deg);
+    -moz-transform    : rotate(360deg);
+    -o-transform      : rotate(360deg);
+    background        : #fff;
+    color             : #369AD1;
+    border            : 1px solid #B7C1D3;
+}  
+
+.icon-zoom i{
+    transform : scale(0.7);
+    transition: transform 0.2s ease 0s, opacity 0.2s ease 0s;
+ 
+}
+
+.icon-zoom:hover i{
+    transform : scale(1);
+}  
+
+.icon-zoom:hover {
+	background : #fff;
+	color      : #369AD1;
+	border     : 1px solid #B7C1D3;
+} 
+
+.bg-green {
+    background-color: #45b6b0 !important;
+}
+
+.bg-aqua {
+    background-color: #65c3df !important;
+}
+
+.bg-red {
+    background-color: #ff6b6b !important;
+}
+
+.boolean-switch {
+	height : 25px;
+	width  : 65px;
+}
+
+.switch-ios input:checked + label {
+    color : #fff !important;
+}
+
+.switch-ios.switch-toggle a {
+    background-color : #6597ca !important;
+}
+
+.conditional-btn .switch-toggle{
+    width  : 75px;
+    height : 25px;
+}
+   
+#new-link-line {
+	position                 : absolute;
+	width                    : 3px;
+	background-color         : #06a;
+	z-index                  : 100;
+	-webkit-transform-origin : top left;
+	-moz-transform-origin    : top left;
+	-o-transform-origin      : top left;
+	-ms-transform-origin     : top left;
+	transform-origin         : top left;
+}
+
+.fast {
+   border         : 5px solid #479BD3;
+   opacity        : 0.5;
+   z-index        : 100;
+   border-radius  : 100%;
+   pointer-events : none;
+}
+      
+.connection-border-right span {
+   left : 1em;
+}
+.connection-border-left span {
+   right : 1em;
+}
+.connection-border-top span {
+   top : 1em;
+}
+.connection-border-bottom span {
+   bottom : 1em;
+}

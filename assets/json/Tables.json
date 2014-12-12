@@ -1,0 +1,52 @@
+[
+  {
+    "allowDrop": false,
+    "name": "bestellpos",
+    "leaf": true
+  },
+  {
+    "allowDrop": false,
+    "name": "bestellung",
+    "leaf": true
+  },
+  {
+    "allowDrop": false,
+    "name": "bilder",
+    "leaf": true
+  },
+  {
+    "allowDrop": false,
+    "name": "category",
+    "leaf": true
+  },
+  {
+    "allowDrop": false,
+    "name": "categorynst",
+    "leaf": true
+  },
+  {
+    "allowDrop": false,
+    "name": "hersteller",
+    "leaf": true
+  },
+  {
+    "allowDrop": false,
+    "name": "histpreise",
+    "leaf": true
+  },
+  {
+    "allowDrop": false,
+    "name": "inventur",
+    "leaf": true
+  },
+  {
+    "allowDrop": false,
+    "name": "prod2cat",
+    "leaf": true
+  },
+  {
+    "allowDrop": false,
+    "name": "produkt",
+    "leaf": true
+  }
+]

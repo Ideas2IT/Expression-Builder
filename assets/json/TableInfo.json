@@ -1,0 +1,794 @@
+{
+  "bestellpos": [
+    {
+      "field": "bestellpos_id",
+      "extra": "auto_increment",
+      "id": "5C61E7CE-983D-5F59-8FAD5D540F57871D",
+      "key": "PRI",
+      "tableName": "bestellpos",
+      "null": false,
+      "default": "",
+      "type": "integer"
+    },
+    {
+      "field": "bestell_id",
+      "extra": "",
+      "id": "5C61E7CF-0208-6241-36954D0D5C7028DC",
+      "key": "MUL",
+      "tableName": "bestellpos",
+      "null": true,
+      "default": 0,
+      "type": "integer"
+    },
+    {
+      "field": "produkt_id",
+      "extra": "",
+      "id": "5C61E7D0-9A0A-8C10-F241169759EE9E5D",
+      "key": "MUL",
+      "tableName": "bestellpos",
+      "null": true,
+      "default": 0,
+      "type": "integer"
+    },
+    {
+      "field": "ean",
+      "extra": "",
+      "id": "5C61E7D1-E6D8-BA53-F0A6E1775869950D",
+      "key": "MUL",
+      "tableName": "bestellpos",
+      "null": true,
+      "default": "",
+      "type": "string"
+    },
+    {
+      "field": "anzahl",
+      "extra": "",
+      "id": "5C61E7D2-F7B4-5758-CC8066EE4802F802",
+      "key": "",
+      "tableName": "bestellpos",
+      "null": true,
+      "default": 0,
+      "type": "integer"
+    },
+    {
+      "field": "bemerkung",
+      "extra": "",
+      "id": "5C61E7D3-F88E-BF1C-E1266BD18A298779",
+      "key": "",
+      "tableName": "bestellpos",
+      "null": true,
+      "default": "",
+      "type": "string"
+    },
+    {
+      "field": "ek_netto",
+      "extra": "",
+      "id": "5C61E7D4-E186-41FE-C4619161E41F27E8",
+      "key": "",
+      "tableName": "bestellpos",
+      "null": true,
+      "default": 0,
+      "type": "decimal"
+    },
+    {
+      "field": "datetimeadded",
+      "extra": "",
+      "id": "5C61E7D5-EFB1-3A89-B0BDA963F7475417",
+      "key": "",
+      "tableName": "bestellpos",
+      "null": true,
+      "default": "",
+      "type": "datetime"
+    },
+    {
+      "field": "datetimeupdated",
+      "extra": "",
+      "id": "5C61E7D6-0F6A-5766-A8D19A60C2C7D2DD",
+      "key": "",
+      "tableName": "bestellpos",
+      "null": true,
+      "default": "",
+      "type": "datetime"
+    }
+  ],
+  "bestellung": [
+    {
+      "field": "bestell_id",
+      "extra": "auto_increment",
+      "id": "5C8EE011-BAC6-D852-971498BB7001BC82",
+      "key": "PRI",
+      "tableName": "bestellung",
+      "null": false,
+      "default": "",
+      "type": "integer"
+    },
+    {
+      "field": "bestell_datum",
+      "extra": "",
+      "id": "5C8EE012-F5EF-F0C7-0254F66306E5DC44",
+      "key": "",
+      "tableName": "bestellung",
+      "null": true,
+      "default": "",
+      "type": "datetime"
+    },
+    {
+      "field": "bname",
+      "extra": "",
+      "id": "5C8EE013-F08E-BE9C-8E6CF0A444B75BE8",
+      "key": "MUL",
+      "tableName": "bestellung",
+      "null": true,
+      "default": "",
+      "type": "string"
+    }
+  ],
+  "bilder": [
+    {
+      "field": "bilder_id",
+      "extra": "auto_increment",
+      "id": "5C934069-D759-BFBA-7598570FB142B66C",
+      "key": "PRI",
+      "tableName": "bilder",
+      "null": false,
+      "default": "",
+      "type": "integer"
+    },
+    {
+      "field": "produkt_id",
+      "extra": "",
+      "id": "5C93406A-EFBD-0E85-62E47A8EED932550",
+      "key": "MUL",
+      "tableName": "bilder",
+      "null": true,
+      "default": 0,
+      "type": "integer"
+    },
+    {
+      "field": "hersteller_id",
+      "extra": "",
+      "id": "5C93406B-0CF4-31CE-7E490130DC3DAD59",
+      "key": "MUL",
+      "tableName": "bilder",
+      "null": true,
+      "default": 0,
+      "type": "integer"
+    },
+    {
+      "field": "magento_id",
+      "extra": "",
+      "id": "5C93406C-0C1D-6E9D-F288AA740F023C0C",
+      "key": "",
+      "tableName": "bilder",
+      "null": true,
+      "default": 0,
+      "type": "integer"
+    },
+    {
+      "field": "dateiname",
+      "extra": "",
+      "id": "5C93406D-E92B-F500-8FD5F2A6D88D45D4",
+      "key": "",
+      "tableName": "bilder",
+      "null": true,
+      "default": "",
+      "type": "string"
+    },
+    {
+      "field": "thumbnail",
+      "extra": "",
+      "id": "5C93406E-0CD6-8672-5ECFEFD38C05D220",
+      "key": "",
+      "tableName": "bilder",
+      "null": true,
+      "default": "",
+      "type": "string"
+    },
+    {
+      "field": "displayorder",
+      "extra": "",
+      "id": "5C93406F-0B9F-83F8-CC4F31200A6454C9",
+      "key": "",
+      "tableName": "bilder",
+      "null": true,
+      "default": 0,
+      "type": "integer"
+    },
+    {
+      "field": "bdelfromdisk",
+      "extra": "",
+      "id": "5C934070-CCF5-94F3-F97CCA9839AD0E66",
+      "key": "",
+      "tableName": "bilder",
+      "null": true,
+      "default": 0,
+      "type": "boolean"
+    },
+    {
+      "field": "bdelfromshop",
+      "extra": "",
+      "id": "5C934071-0683-8691-E32F0C6492300F87",
+      "key": "",
+      "tableName": "bilder",
+      "null": true,
+      "default": 0,
+      "type": "boolean"
+    },
+    {
+      "field": "datetimecreated",
+      "extra": "",
+      "id": "5C934072-0A1D-B713-504EDD088E706F15",
+      "key": "",
+      "tableName": "bilder",
+      "null": true,
+      "default": "1000-01-01 00:00:00",
+      "type": "datetime"
+    },
+    {
+      "field": "datetimeupdated",
+      "extra": "",
+      "id": "5C934073-E81D-7EF4-9D6734DF5B4C2E98",
+      "key": "",
+      "tableName": "bilder",
+      "null": true,
+      "default": "1000-01-01 00:00:00",
+      "type": "datetime"
+    },
+    {
+      "field": "shopsyncdate",
+      "extra": "",
+      "id": "5C934074-ECC2-554B-0854606A0479C050",
+      "key": "",
+      "tableName": "bilder",
+      "null": true,
+      "default": "1000-01-01 00:00:00",
+      "type": "datetime"
+    }
+  ],
+  "category": [
+    {
+      "field": "categoryId",
+      "extra": "auto_increment",
+      "id": "5C98ED72-A9F2-1AA8-619DE46910060CDB",
+      "key": "PRI",
+      "tableName": "category",
+      "null": false,
+      "default": "",
+      "type": "integer"
+    },
+    {
+      "field": "parentCategoryId",
+      "extra": "",
+      "id": "5C98ED73-D5B4-C835-6F746D259EA697EC",
+      "key": "MUL",
+      "tableName": "category",
+      "null": true,
+      "default": "",
+      "type": "integer"
+    },
+    {
+      "field": "categoryName",
+      "extra": "",
+      "id": "5C98ED74-09EC-6057-F7477A39B50C47FF",
+      "key": "",
+      "tableName": "category",
+      "null": true,
+      "default": "",
+      "type": "string"
+    },
+    {
+      "field": "category_multiplier",
+      "extra": "",
+      "id": "5C98ED75-A3D3-4DA4-249D31F05002FAC9",
+      "key": "",
+      "tableName": "category",
+      "null": true,
+      "default": 1,
+      "type": "decimal"
+    },
+    {
+      "field": "mage_categoryId",
+      "extra": "",
+      "id": "5C98ED76-AF52-5930-49FDC21F0573F5ED",
+      "key": "",
+      "tableName": "category",
+      "null": true,
+      "default": "",
+      "type": "integer"
+    }
+  ],
+  "categorynst": [
+    {
+      "field": "categoryId",
+      "extra": "",
+      "id": "5C9DF027-CBAF-42BC-6CE9D313C9E1EBC7",
+      "key": "PRI",
+      "tableName": "categorynst",
+      "null": false,
+      "default": 0,
+      "type": "integer"
+    },
+    {
+      "field": "lft",
+      "extra": "",
+      "id": "5C9DF028-F4F9-0428-AB98A2FC6E235FC5",
+      "key": "",
+      "tableName": "categorynst",
+      "null": true,
+      "default": "",
+      "type": "integer"
+    },
+    {
+      "field": "rgt",
+      "extra": "",
+      "id": "5C9DF029-A139-B07A-A482778B78F583AE",
+      "key": "",
+      "tableName": "categorynst",
+      "null": true,
+      "default": "",
+      "type": "integer"
+    }
+  ],
+  "hersteller": [
+    {
+      "field": "hersteller_id",
+      "extra": "",
+      "id": "5CA6C19C-92C5-9F98-E283113038E05B3B",
+      "key": "PRI",
+      "tableName": "hersteller",
+      "null": false,
+      "default": 0,
+      "type": "integer"
+    },
+    {
+      "field": "hname",
+      "extra": "",
+      "id": "5CA6C19D-B8CF-59A1-18800860358BE00B",
+      "key": "",
+      "tableName": "hersteller",
+      "null": true,
+      "default": "",
+      "type": "string"
+    },
+    {
+      "field": "hersteller_discount",
+      "extra": "",
+      "id": "5CA6C19E-041E-EBDE-0F2F35566B700073",
+      "key": "",
+      "tableName": "hersteller",
+      "null": true,
+      "default": 0,
+      "type": "integer"
+    },
+    {
+      "field": "hersteller_multiplier_multiplier",
+      "extra": "",
+      "id": "5CA6C19F-D9A4-7496-A018348832CC00AE",
+      "key": "",
+      "tableName": "hersteller",
+      "null": false,
+      "default": 1,
+      "type": "decimal"
+    }
+  ],
+  "histpreise": [
+    {
+      "field": "histpreis_id",
+      "extra": "auto_increment",
+      "id": "5CAEF2BA-AC2B-48D9-2C4AA0ECC39F2911",
+      "key": "PRI",
+      "tableName": "histpreise",
+      "null": false,
+      "default": "",
+      "type": "integer"
+    },
+    {
+      "field": "produkt_id",
+      "extra": "",
+      "id": "5CAEF2BB-0942-7147-1E4B51E80C080F48",
+      "key": "",
+      "tableName": "histpreise",
+      "null": false,
+      "default": "",
+      "type": "integer"
+    },
+    {
+      "field": "preis_alt",
+      "extra": "",
+      "id": "5CAEF2BC-93E6-5AD2-7A13089452DB6EA5",
+      "key": "",
+      "tableName": "histpreise",
+      "null": false,
+      "default": 0,
+      "type": "decimal"
+    },
+    {
+      "field": "preis_neu",
+      "extra": "",
+      "id": "5CAEF2BD-00FE-37D2-6DA4B2E3229832FE",
+      "key": "",
+      "tableName": "histpreise",
+      "null": false,
+      "default": 0,
+      "type": "decimal"
+    },
+    {
+      "field": "preistyp",
+      "extra": "",
+      "id": "5CAEF2BE-B31D-5278-FE5F9AE246211777",
+      "key": "",
+      "tableName": "histpreise",
+      "null": false,
+      "default": "",
+      "type": "string"
+    },
+    {
+      "field": "datetimeadded",
+      "extra": "",
+      "id": "5CAEF2BF-D08E-5DC9-16A68874B690523E",
+      "key": "",
+      "tableName": "histpreise",
+      "null": false,
+      "default": "CURRENT_TIMESTAMP",
+      "type": "time"
+    }
+  ],
+  "inventar": [
+    {
+      "field": "inventar_id",
+      "extra": "auto_increment",
+      "id": "5CB59AFF-C873-AD74-4079BA0CD73E043F",
+      "key": "PRI",
+      "tableName": "inventar",
+      "null": false,
+      "default": "",
+      "type": "integer"
+    },
+    {
+      "field": "inventur_id",
+      "extra": "",
+      "id": "5CB59B00-D72D-6DF3-71EB511834501625",
+      "key": "MUL",
+      "tableName": "inventar",
+      "null": true,
+      "default": 0,
+      "type": "integer"
+    },
+    {
+      "field": "produkt_id",
+      "extra": "",
+      "id": "5CB59B01-98E3-DD54-7CF202C273013E30",
+      "key": "MUL",
+      "tableName": "inventar",
+      "null": true,
+      "default": 0,
+      "type": "integer"
+    },
+    {
+      "field": "ean",
+      "extra": "",
+      "id": "5CB59B02-C027-4B3A-5ACA056151063CF4",
+      "key": "MUL",
+      "tableName": "inventar",
+      "null": true,
+      "default": "",
+      "type": "string"
+    },
+    {
+      "field": "anzahl",
+      "extra": "",
+      "id": "5CB59B03-AB4F-E71E-B4A5EA055C05609F",
+      "key": "",
+      "tableName": "inventar",
+      "null": true,
+      "default": 0,
+      "type": "integer"
+    },
+    {
+      "field": "ek_netto",
+      "extra": "",
+      "id": "5CB59B04-BE22-5C2C-5769EF552A90FE58",
+      "key": "",
+      "tableName": "inventar",
+      "null": false,
+      "default": 0,
+      "type": "decimal"
+    },
+    {
+      "field": "memo",
+      "extra": "",
+      "id": "5CB59B05-9B58-881F-96B5F437B52DC2EA",
+      "key": "",
+      "tableName": "inventar",
+      "null": true,
+      "default": "",
+      "type": "string"
+    },
+    {
+      "field": "babschr",
+      "extra": "",
+      "id": "5CB59B06-0B7B-2F78-35B762F9EA2DB809",
+      "key": "",
+      "tableName": "inventar",
+      "null": true,
+      "default": 0,
+      "type": "boolean"
+    }
+  ],
+  "inventur": [
+    {
+      "field": "inventur_id",
+      "extra": "auto_increment",
+      "id": "5CBB17A4-9C74-15E4-9DB8F88855334973",
+      "key": "PRI",
+      "tableName": "inventur",
+      "null": false,
+      "default": "",
+      "type": "integer"
+    },
+    {
+      "field": "stichtag",
+      "extra": "",
+      "id": "5CBB17A5-AFC5-98DD-18B15108FDC266CE",
+      "key": "",
+      "tableName": "inventur",
+      "null": true,
+      "default": "",
+      "type": "datetime"
+    },
+    {
+      "field": "invname",
+      "extra": "",
+      "id": "5CBB17A6-F2BF-3D06-AA96A75DE273A544",
+      "key": "",
+      "tableName": "inventur",
+      "null": true,
+      "default": "",
+      "type": "string"
+    }
+  ],
+  "prod2cat": [
+    {
+      "field": "produkt_id",
+      "extra": "",
+      "id": "5CC16C34-C408-133C-0DDE6EB93B859E7D",
+      "key": "PRI",
+      "tableName": "prod2cat",
+      "null": false,
+      "default": 0,
+      "type": "integer"
+    },
+    {
+      "field": "categoryId",
+      "extra": "",
+      "id": "5CC16C35-AF73-636D-C660C0D49B48F544",
+      "key": "PRI",
+      "tableName": "prod2cat",
+      "null": false,
+      "default": 0,
+      "type": "integer"
+    }
+  ],
+  "produkt": [
+    {
+      "field": "produkt_id",
+      "extra": "auto_increment",
+      "id": "5CC5F383-B23F-3E90-A8A628E47703C410",
+      "key": "PRI",
+      "tableName": "produkt",
+      "null": false,
+      "default": "",
+      "type": "integer"
+    },
+    {
+      "field": "hersteller_id",
+      "extra": "",
+      "id": "5CC5F384-07AD-0E6F-867D44F676AD3D1D",
+      "key": "MUL",
+      "tableName": "produkt",
+      "null": true,
+      "default": 0,
+      "type": "integer"
+    },
+    {
+      "field": "artikelnr",
+      "extra": "",
+      "id": "5CC5F385-BBA2-E07A-83AF23804C902F24",
+      "key": "",
+      "tableName": "produkt",
+      "null": true,
+      "default": "",
+      "type": "string"
+    },
+    {
+      "field": "ean",
+      "extra": "",
+      "id": "5CC5F386-EF14-5A44-CBCBB6198585F083",
+      "key": "MUL",
+      "tableName": "produkt",
+      "null": true,
+      "default": 0,
+      "type": "string"
+    },
+    {
+      "field": "pname",
+      "extra": "",
+      "id": "5CC5F387-C49B-1B0D-0E63DBB8A49A9234",
+      "key": "",
+      "tableName": "produkt",
+      "null": true,
+      "default": "",
+      "type": "string"
+    },
+    {
+      "field": "kurzbeschreibung",
+      "extra": "",
+      "id": "5CC5F388-FB08-E544-B9FC20DE1887AB0D",
+      "key": "",
+      "tableName": "produkt",
+      "null": true,
+      "default": "",
+      "type": "string"
+    },
+    {
+      "field": "beschreibung",
+      "extra": "",
+      "id": "5CC5F389-D6CF-99E7-884948C00BBCAB32",
+      "key": "",
+      "tableName": "produkt",
+      "null": true,
+      "default": "",
+      "type": "string"
+    },
+    {
+      "field": "kennzeichnung",
+      "extra": "",
+      "id": "5CC5F38A-E132-D67D-FED5EA0E11C0239F",
+      "key": "",
+      "tableName": "produkt",
+      "null": true,
+      "default": "",
+      "type": "string"
+    },
+    {
+      "field": "ek_netto",
+      "extra": "",
+      "id": "5CC5F38B-9959-CFB6-EFA9F3E137ACD835",
+      "key": "",
+      "tableName": "produkt",
+      "null": true,
+      "default": 0,
+      "type": "decimal"
+    },
+    {
+      "field": "spanne",
+      "extra": "",
+      "id": "5CC5F38C-9285-E7ED-1FFDF15D83F64A50",
+      "key": "",
+      "tableName": "produkt",
+      "null": true,
+      "default": 0,
+      "type": "integer"
+    },
+    {
+      "field": "vk_netto",
+      "extra": "",
+      "id": "5CC5F38D-FFF1-6012-F26EE733FCE26FCC",
+      "key": "",
+      "tableName": "produkt",
+      "null": true,
+      "default": 0,
+      "type": "decimal"
+    },
+    {
+      "field": "hersteller_discount",
+      "extra": "",
+      "id": "5CC5F38E-90DC-C733-503A0524AEF02497",
+      "key": "",
+      "tableName": "produkt",
+      "null": true,
+      "default": 0,
+      "type": "integer"
+    },
+    {
+      "field": "warengruppe1",
+      "extra": "",
+      "id": "5CC5F38F-BA2E-2583-5CD41651CF989425",
+      "key": "",
+      "tableName": "produkt",
+      "null": true,
+      "default": "",
+      "type": "string"
+    },
+    {
+      "field": "warengruppe2",
+      "extra": "",
+      "id": "5CC5F390-E252-5793-7299A3974D0F7D55",
+      "key": "",
+      "tableName": "produkt",
+      "null": true,
+      "default": "",
+      "type": "string"
+    },
+    {
+      "field": "vk_brutto",
+      "extra": "",
+      "id": "5CC5F391-D124-E131-E74AA22443E69573",
+      "key": "",
+      "tableName": "produkt",
+      "null": true,
+      "default": 0,
+      "type": "decimal"
+    },
+    {
+      "field": "schlagworte",
+      "extra": "",
+      "id": "5CC5F392-937E-5D4C-BB46429F6B9211E9",
+      "key": "",
+      "tableName": "produkt",
+      "null": true,
+      "default": "",
+      "type": "string"
+    },
+    {
+      "field": "bestand",
+      "extra": "",
+      "id": "5CC5F393-C0BB-73C2-0A29C830F4000FAF",
+      "key": "",
+      "tableName": "produkt",
+      "null": true,
+      "default": 0,
+      "type": "integer"
+    },
+    {
+      "field": "datetimeadded",
+      "extra": "",
+      "id": "5CC5F394-A6DC-4CF3-232586CA1C2099EF",
+      "key": "",
+      "tableName": "produkt",
+      "null": true,
+      "default": "",
+      "type": "datetime"
+    },
+    {
+      "field": "starttime",
+      "extra": "",
+      "id": "5CC5F395-989B-DB31-5B13904B003B2254",
+      "key": "",
+      "tableName": "produkt",
+      "null": true,
+      "default": "",
+      "type": "time"
+    },
+    {
+      "field": "isshop",
+      "extra": "",
+      "id": "5CC5F396-E91A-22B5-3BD746FCB8AF128C",
+      "key": "",
+      "tableName": "produkt",
+      "null": true,
+      "default": 0,
+      "type": "boolean"
+    },
+    {
+      "field": "shopsyncdate",
+      "extra": "",
+      "id": "5CC5F397-EADB-D6E9-A0EEFCDD3B0AB2E5",
+      "key": "",
+      "tableName": "produkt",
+      "null": true,
+      "default": "1000-01-01 00:00:00",
+      "type": "date"
+    },
+    {
+      "field": "magento_id",
+      "extra": "",
+      "id": "5CC5F398-0F35-CB6B-94F00AB18F22FCD0",
+      "key": "",
+      "tableName": "produkt",
+      "null": true,
+      "default": 0,
+      "type": "integer"
+    }
+  ]
+}
